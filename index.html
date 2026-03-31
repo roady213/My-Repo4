@@ -243,7 +243,7 @@
             );
           });
 
-          if (conceptualViewMarkup != "") {
+          if ($scope.filteredConceptualView.length > 0) {
             mermaid.render('mermaidDiagramHolder', conceptualViewMarkup, function (svgCode) {
               document.getElementById('mermaidDiagram').innerHTML = svgCode;
             });
