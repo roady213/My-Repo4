@@ -231,12 +231,12 @@
           var direction = "";
 
           angular.forEach($scope.filteredConceptualView, function (value, key) {
-            if (value.Direction && value.Direction.Value == "BiDirectional") {
-              direction = "}--{";
-            }
-            else {
-              direction = "}o--{";
-            }
+            if (value.Direction.Value == "BiDirectional") {
+                            direction = "}|--|{";
+                        }
+                        else {
+                            direction = "}o--|{";
+                        };
 
             conceptualViewMarkup = conceptualViewMarkup.concat(
               value.SourceSystem + " " + direction + " " + value.DestinationSystem + " : \"" + value.IntRef + "\"\n"
